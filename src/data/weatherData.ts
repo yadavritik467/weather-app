@@ -1,4 +1,18 @@
-import { WeatherData, City } from "../types/weather";
+import {
+  WeatherData,
+  City,
+  CityWithCoordinates,
+  RainChance,
+} from "../types/weather";
+
+export const rainChanceData: RainChance[] = [
+  { time: "10AM", type: "Rainy" as const, value: 65 },
+  { time: "11AM", type: "Sunny" as const, value: 40 },
+  { time: "12PM", type: "Heavy" as const, value: 70 },
+  { time: "01PM", type: "Rainy" as const, value: 55 },
+  { time: "02PM", type: "Sunny" as const, value: 80 },
+  { time: "03PM", type: "Heavy" as const, value: 60 },
+];
 
 export const weatherData: WeatherData = {
   city: "Berlin",
@@ -47,17 +61,66 @@ export const savedCities: City[] = [
     country: "Portugal",
     temperature: 23,
     weatherCondition: "sunny",
+    humidity: 30,
+    coordinates: [-9.1393, 38.7223],
   },
   {
     name: "Kyoto",
     country: "Japan",
     temperature: 29,
     weatherCondition: "sunny",
+    humidity: 45,
+    coordinates: [135.7681, 35.0116],
   },
   {
     name: "Antalya",
     country: "Turkey",
     temperature: 30,
     weatherCondition: "sunny",
+    humidity: 35,
+    coordinates: [30.7133, 36.8969],
+  },
+];
+
+export const worldCities: CityWithCoordinates[] = [
+  {
+    name: "Berlin",
+    country: "Germany",
+    temperature: 20,
+    weatherCondition: "mostly cloudy",
+    humidity: 24,
+    coordinates: [13.405, 52.52],
+  },
+  {
+    name: "New York",
+    country: "USA",
+    temperature: 18,
+    weatherCondition: "rainy",
+    humidity: 56,
+    coordinates: [-74.006, 40.7128],
+  },
+  {
+    name: "Tokyo",
+    country: "Japan",
+    temperature: 27,
+    weatherCondition: "sunny",
+    humidity: 40,
+    coordinates: [139.6917, 35.6895],
+  },
+  {
+    name: "Sydney",
+    country: "Australia",
+    temperature: 22,
+    weatherCondition: "partly cloudy",
+    humidity: 33,
+    coordinates: [151.2093, -33.8688],
+  },
+  {
+    name: "Cape Town",
+    country: "South Africa",
+    temperature: 19,
+    weatherCondition: "windy",
+    humidity: 28,
+    coordinates: [18.4241, -33.9249],
   },
 ];
