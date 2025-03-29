@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.toggle-checkbox:checked {
+  @apply transform translate-x-6;
+}
+
+.toggle-checkbox:checked + .toggle-label {
+  @apply bg-gray-200;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f9fafb;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e5e7eb;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d1d5db;
+}
+
+/* Global responsive styles */
+@layer base {
+  html {
+    font-size: 15px;
+  }
+
+  @media (max-width: 640px) {
+    html {
+      font-size: 14px;
+    }
+  }
+
+  body {
+    @apply bg-dark-bg text-dark-text;
+    overflow-x: hidden;
+  }
+
+  /* For better mobile scrolling */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Prevent text size adjustment on orientation change */
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+}
+
+/* Make canvas charts more responsive */
+@layer components {
+  .chart-container {
+    @apply relative w-full h-full;
+  }
+
+  /* Make sure images don't overflow */
+  img {
+    @apply max-w-full h-auto;
+  }
+}
