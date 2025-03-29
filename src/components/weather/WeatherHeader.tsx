@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { RiSearchLine, RiMenuLine } from 'react-icons/ri';
+import { RiSearchLine } from 'react-icons/ri';
 
 interface WeatherHeaderProps {
     userName: string;

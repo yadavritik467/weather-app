@@ -61,7 +61,6 @@ const WeatherOverview: React.FC<WeatherOverviewProps> = ({ weatherData }) => {
                             x: {
                                 grid: {
                                     display: false,
-                                    drawBorder: false,
                                 },
                                 ticks: {
                                     color: '#9CA3AF',
@@ -77,7 +76,6 @@ const WeatherOverview: React.FC<WeatherOverviewProps> = ({ weatherData }) => {
                                 max: 100,
                                 grid: {
                                     color: 'rgba(156, 163, 175, 0.1)',
-                                    drawBorder: false,
                                 },
                                 ticks: {
                                     color: '#9CA3AF',
